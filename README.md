@@ -20,6 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Notes
 
+- [34 jornadas](https://www.ligaportugal.pt/pt/liga/calendario/completo/20212022/ligaportugalbwin).
 - 11 da Jornada (Liga Portugal bwin):
   - Esquema tático: 4x3x3.
 - In React 17, with the [new JSX transform](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html), you don't need to import React (`import React from 'react';`) to use JSX. [Automated script](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports) (`npx react-codemod update-react-imports`).
@@ -42,3 +43,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - `yarn remove concurrently -D`.
   - It supports `npm`, `yarn`, and `pnpm`.
 - [prettier-plugin-toml](https://github.com/bd82/toml-tools/tree/master/packages/prettier-plugin-toml).
+- [Danfo.js](https://danfo.jsdata.org/) package (pandas for JavaScript).

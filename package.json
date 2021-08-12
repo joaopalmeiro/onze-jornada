@@ -47,8 +47,10 @@
     ]
   },
   "devDependencies": {
+    "danfojs-node": "^0.2.7",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "lodash": "^4.17.21",
     "netlify-cli": "^6.2.7",
     "prettier": "^2.3.2"
   }
