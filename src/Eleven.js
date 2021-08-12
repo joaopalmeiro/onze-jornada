@@ -21,9 +21,9 @@ function Eleven() {
     fetchData();
   }, []);
 
-  console.log(players);
+  // console.log(players);
 
-  return <div>Hello, World!</div>;
+  return <div>{players && players.map((player) => <p>{JSON.stringify(player)}</p>)}</div>;
 }
 
 export default Eleven;
