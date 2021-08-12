@@ -28,3 +28,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [Secret Keys in React](https://www.rockyourcode.com/secret-keys-in-react/) blog post.
   - **Note**: _WARNING: Do not store any secrets (such as private API keys) in your React app! Environment variables are embedded into the build, meaning anyone can view them by inspecting your app's files._
   - [How to Securely Access Secret API keys using Netlify Functions in a React App](https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/) blog post.
+- [Airtable API](https://airtable.com/api) + [airtable](https://www.npmjs.com/package/airtable) package.
