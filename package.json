@@ -4,11 +4,13 @@
   "description": "Visualização do \"11 da Jornada\" da Liga Portugal bwin 2021-22.",
   "private": true,
   "dependencies": {
+    "airtable": "^0.11.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3"
   },
   "scripts": {
+    "dev": "netlify dev",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,6 +49,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "netlify-cli": "^6.2.7",
     "prettier": "^2.3.2"
   }
 }
