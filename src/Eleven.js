@@ -23,7 +23,9 @@ function Eleven() {
 
   // console.log(players);
 
-  return <div>{players && players.map((player) => <p>{JSON.stringify(player)}</p>)}</div>;
+  return (
+    <div>{players && players.map((player) => <p key={player.id}>{JSON.stringify(player)}</p>)}</div>
+  );
 }
 
 export default Eleven;
