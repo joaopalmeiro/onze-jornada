@@ -46,3 +46,6 @@ export const TEAM_COLORS = {
   'Gil Vicente FC': '#ad1814',
   'Boavista FC': '#000000'
 };
+
+export const WAFFLE_SIZE = 600; // px
+export const WAFFLE_DIMENSIONS = 6; // Number of rows/columns
