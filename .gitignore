@@ -26,3 +26,4 @@ yarn-error.log*
 .env
 boilerplate.csv
 formatter.css
+eslint_config.txt

@@ -1,4 +1,8 @@
+import { filter } from 'lodash/collection';
 import { useEffect, useState } from 'react';
+
+import { positions } from './enums';
+import WaffleChart from './WaffleChart';
 
 function Eleven() {
   const [players, setPlayers] = useState(null);
@@ -23,9 +27,7 @@ function Eleven() {
 
   // console.log(players);
 
-  return (
-    <div>{players && players.map((player) => <p key={player.id}>{JSON.stringify(player)}</p>)}</div>
-  );
+  return players && <WaffleChart data={filter(players, { fields: { Posição: positions.GR } })} />;
 }
 
 export default Eleven;

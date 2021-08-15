@@ -47,5 +47,5 @@ export const TEAM_COLORS = {
   'Boavista FC': '#000000'
 };
 
-export const WAFFLE_SIZE = 600; // px
 export const WAFFLE_DIMENSIONS = 6; // Number of rows/columns
+export const WAFFLE_SIZE = WAFFLE_DIMENSIONS * 20; // px

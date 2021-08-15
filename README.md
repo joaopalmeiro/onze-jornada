@@ -44,3 +44,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - It supports `npm`, `yarn`, and `pnpm`.
 - [prettier-plugin-toml](https://github.com/bd82/toml-tools/tree/master/packages/prettier-plugin-toml).
 - [Danfo.js](https://danfo.jsdata.org/) package (pandas for JavaScript).
+- `yarn remove lodash --dev && yarn add lodash`.
+- ESLint:
+  - `yarn run eslint --print-config package.json`.
