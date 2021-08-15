@@ -57,3 +57,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     - Gradient API (including Text Gradient API).
     - Color mode ([CRA](https://chakra-ui.com/docs/features/color-mode#for-create-react-app)).
     - CSS variables (Chakra UI now converts theme tokens to CSS variables).
+    - Responsive styles. It uses the `@media(min-width)` media query to ensure that interfaces are mobile-first.
