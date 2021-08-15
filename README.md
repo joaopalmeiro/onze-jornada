@@ -47,3 +47,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `yarn remove lodash --dev && yarn add lodash`.
 - ESLint:
   - `yarn run eslint --print-config package.json`.
+- Chakra UI:
+  - `yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`.
+  - [CSSReset](https://github.com/chakra-ui/chakra-ui/blob/main/packages/css-reset/src/css-reset.tsx).
+  - 🌀: emoji for learning curve.
