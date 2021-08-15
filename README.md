@@ -48,6 +48,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - ESLint:
   - `yarn run eslint --print-config package.json`.
 - Chakra UI:
+  - For React (for Next.js and CRA as well).
   - `yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`.
   - [CSSReset](https://github.com/chakra-ui/chakra-ui/blob/main/packages/css-reset/src/css-reset.tsx).
   - 🌀: emoji for learning curve.
+  - Features:
+    - Style props.
+    - Gradient API (including Text Gradient API).
+    - Color mode ([CRA](https://chakra-ui.com/docs/features/color-mode#for-create-react-app)).
+    - CSS variables (Chakra UI now converts theme tokens to CSS variables).
