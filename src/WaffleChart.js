@@ -32,7 +32,7 @@ function WaffleChart({ data }) {
           // More info:
           // - https://eslint-plugin-es.mysticatea.dev/rules/no-nullish-coalescing-operators.html
           // - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-          const color = TEAM_COLORS[colorAccessor(d)] || 'gray';
+          const color = TEAM_COLORS[colorAccessor(d)] || 'lightgray';
 
           // More info:
           // - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder

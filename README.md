@@ -52,9 +52,25 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - `yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`.
   - [CSSReset](https://github.com/chakra-ui/chakra-ui/blob/main/packages/css-reset/src/css-reset.tsx).
   - 🌀: emoji for learning curve.
+  - [useClipboard](https://chakra-ui.com/docs/hooks/use-clipboard) hook.
   - Features:
     - Style props.
     - Gradient API (including Text Gradient API).
     - Color mode ([CRA](https://chakra-ui.com/docs/features/color-mode#for-create-react-app)).
     - CSS variables (Chakra UI now converts theme tokens to CSS variables).
     - Responsive styles. It uses the `@media(min-width)` media query to ensure that interfaces are mobile-first.
+    - Chakra factory: `chakra.<element>` notation (to create base HTML elements with theme-aware style props) and the `chakra()` function (to convert non-Chakra components/JSX elements to Chakra-enabled components).
+    - Global styles.
+    - Text and layer styles (to group and apply repeating properties).
+    - `sx` prop:
+      - To set a CSS property that is not listed in the [Style Props](https://chakra-ui.com/docs/features/style-props) list.
+      - To define CSS variables.
+      - To add complex, nested selectors.
+      - To add custom media queries.
+    - RTL ([Right to Left](https://developer.mozilla.org/en-US/docs/Glossary/rtl)) support.
+    - Theming (+ global styles):
+      - Default [theme](https://chakra-ui.com/docs/theming/theme) and [files](https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src/foundations) (foundational styles/theme tokens).
+      - [Default component style files](https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src/components) ([component styles](https://chakra-ui.com/docs/theming/component-style)).
+      - Single part components vs. multipart components.
+      - [useStyleConfig](https://chakra-ui.com/docs/theming/component-style#consuming-style-config) hook for new components.
+  - [Themera](https://themera.vercel.app/) (to create Chakra UI color schemes).
