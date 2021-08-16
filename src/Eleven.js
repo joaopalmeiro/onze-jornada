@@ -27,7 +27,23 @@ function Eleven() {
 
   // console.log(players);
 
-  return players && <WaffleChart data={filter(players, { fields: { Posição: positions.GR } })} />;
+  return (
+    players && (
+      <>
+        <WaffleChart data={filter(players, { fields: { Posição: positions.GR } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.DD } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.DCD } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.DCE } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.DE } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.MD } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.MC } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.ME } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.AD } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.AC } })} />
+        <WaffleChart data={filter(players, { fields: { Posição: positions.AE } })} />
+      </>
+    )
+  );
 }
 
 export default Eleven;

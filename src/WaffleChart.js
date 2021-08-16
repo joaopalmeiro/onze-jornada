@@ -13,7 +13,7 @@ function WaffleChart({ data }) {
   // More info: https://github.com/d3/d3-scale#band-scales
   const domain = range(WAFFLE_DIMENSIONS, 0, -1);
   // console.log(domain);
-  const scale = scaleBand().domain(domain).range([0, WAFFLE_SIZE]).padding(0.1);
+  const scale = scaleBand().domain(domain).range([0, WAFFLE_SIZE]).paddingInner(0.1);
 
   const cellSize = scale.bandwidth();
   // console.log(cellSize);
