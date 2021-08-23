@@ -53,6 +53,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - [CSSReset](https://github.com/chakra-ui/chakra-ui/blob/main/packages/css-reset/src/css-reset.tsx).
   - 🌀: emoji for learning curve.
   - [useClipboard](https://chakra-ui.com/docs/hooks/use-clipboard) hook.
+  - [@chakra-ui/cra-template](https://github.com/chakra-ui/chakra-ui/tree/main/tooling/cra-template).
   - Features:
     - Style props.
     - Gradient API (including Text Gradient API).
@@ -72,5 +73,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
       - Default [theme](https://chakra-ui.com/docs/theming/theme) and [files](https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src/foundations) (foundational styles/theme tokens).
       - [Default component style files](https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src/components) ([component styles](https://chakra-ui.com/docs/theming/component-style)).
       - Single part components vs. multipart components.
-      - [useStyleConfig](https://chakra-ui.com/docs/theming/component-style#consuming-style-config) hook for new components.
+      - [useStyleConfig](https://chakra-ui.com/docs/theming/component-style#consuming-style-config) (and [useMultiStyleConfig](https://chakra-ui.com/docs/theming/component-style#consuming-multipart-style-config)) hook(s) for new components.
   - [Themera](https://themera.vercel.app/) (to create Chakra UI color schemes).
