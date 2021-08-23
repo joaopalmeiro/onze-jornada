@@ -54,6 +54,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - 🌀: emoji for learning curve.
   - [useClipboard](https://chakra-ui.com/docs/hooks/use-clipboard) hook.
   - [@chakra-ui/cra-template](https://github.com/chakra-ui/chakra-ui/tree/main/tooling/cra-template).
+  - `<Box />`: the base component for Chakra UI.
+  - `<Skeleton />`: to display the loading state of components.
+  - [`<Tooltip />`](https://chakra-ui.com/docs/overlay/tooltip).
   - Features:
     - Style props.
     - Gradient API (including Text Gradient API).
@@ -75,3 +78,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
       - Single part components vs. multipart components.
       - [useStyleConfig](https://chakra-ui.com/docs/theming/component-style#consuming-style-config) (and [useMultiStyleConfig](https://chakra-ui.com/docs/theming/component-style#consuming-multipart-style-config)) hook(s) for new components.
   - [Themera](https://themera.vercel.app/) (to create Chakra UI color schemes).
+- [Fonts for Apple Platforms](https://developer.apple.com/fonts/) (including San Francisco/SF).

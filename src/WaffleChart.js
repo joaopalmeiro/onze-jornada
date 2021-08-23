@@ -1,4 +1,5 @@
 import { scaleBand } from 'd3-scale';
+import { truncate } from 'lodash/string';
 import { range } from 'lodash/util';
 
 import { WAFFLE_SIZE, WAFFLE_DIMENSIONS, TEAM_COLORS } from './constants';
@@ -6,6 +7,7 @@ import { WAFFLE_SIZE, WAFFLE_DIMENSIONS, TEAM_COLORS } from './constants';
 // Accessors
 const xyAccessor = (d) => d.fields['Jornada'];
 const colorAccessor = (d) => d.fields['Clube'];
+const labelAccessor = (d) => d.fields['Posição'];
 
 function WaffleChart({ data }) {
   // console.log(data);
@@ -18,6 +20,14 @@ function WaffleChart({ data }) {
   const cellSize = scale.bandwidth();
   // console.log(cellSize);
 
+  const posLabel = labelAccessor(data[0]);
+
+  // More info:
+  // - https://github.com/airbnb/visx/blob/master/packages/visx-group/src/Group.tsx
+  // - https://chakra-ui.com/docs/features/css-variables#styling-non-chakra-components
+  // - https://chakra-ui.com/docs/features/the-sx-prop#defining-css-custom-properties
+  // - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-anchor
+  // - https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dominant-baseline
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +36,17 @@ function WaffleChart({ data }) {
       width={WAFFLE_SIZE}
       height={WAFFLE_SIZE}
     >
-      {/* More info: https://github.com/airbnb/visx/blob/master/packages/visx-group/src/Group.tsx */}
+      <text
+        x={cellSize / 2}
+        y={cellSize}
+        // y={cellSize / 2}
+        textAnchor="middle"
+        // dominantBaseline="middle"
+        fontFamily="var(--chakra-fonts-mono)"
+        fontSize="var(--chakra-fontSizes-xs)"
+      >
+        {truncate(posLabel, { length: 2, omission: '' })}
+      </text>
       <g>
         {data.map((d) => {
           // More info:

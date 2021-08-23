@@ -48,4 +48,5 @@ export const TEAM_COLORS = {
 };
 
 export const WAFFLE_DIMENSIONS = 6; // Number of rows/columns
-export const WAFFLE_SIZE = WAFFLE_DIMENSIONS * 20; // px
+export const DEFAULT_CELL_SIZE = 20; // px
+export const WAFFLE_SIZE = WAFFLE_DIMENSIONS * DEFAULT_CELL_SIZE; // px
