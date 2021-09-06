@@ -1,5 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import { filter } from 'lodash/collection';
+import { findLast } from 'lodash/collection';
+import { has, get } from 'lodash/object';
 import { useEffect, useState } from 'react';
 
 import { positions } from './enums';
@@ -14,6 +16,7 @@ const elevenTemplateAreas = `
 
 function Eleven() {
   const [players, setPlayers] = useState(null);
+  const [currentMatchday, setCurrentMatchday] = useState(null);
 
   // Source:
   // - https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/
@@ -25,7 +28,15 @@ function Eleven() {
       try {
         const data = await fetch(url).then((res) => res.json());
         // console.log(data);
+
         setPlayers(data);
+        // Source: https://stackoverflow.com/a/44852681
+        setCurrentMatchday(
+          get(
+            findLast(data, (o) => has(o, 'fields.Nome') && has(o, 'fields.Clube')),
+            'fields.Jornada'
+          )
+        );
       } catch (err) {
         console.log(err);
       }
@@ -34,6 +45,7 @@ function Eleven() {
   }, []);
 
   // console.log(players);
+  // console.log(currentMatchday);
 
   // More info:
   // - https://chakra-ui.com/docs/layout/grid#props
