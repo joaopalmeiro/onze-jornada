@@ -1,13 +1,26 @@
+import { Tooltip } from '@chakra-ui/react';
+import { Text, Stack, StackDivider } from '@chakra-ui/react';
 import { scaleBand } from 'd3-scale';
 import { truncate } from 'lodash/string';
 import { range } from 'lodash/util';
 
-import { WAFFLE_SIZE, WAFFLE_DIMENSIONS, TEAM_COLORS } from './constants';
+import { WAFFLE_SIZE, WAFFLE_DIMENSIONS, TEAM_COLORS, DEFAULT_COLOR } from './constants';
 
 // Accessors
 const xyAccessor = (d) => d.fields['Jornada'];
 const colorAccessor = (d) => d.fields['Clube'];
 const labelAccessor = (d) => d.fields['Posição'];
+const nameAccessor = (d) => d.fields['Nome'];
+
+// Tooltip
+const TooltipContent = (props) => (
+  <Stack align="center" spacing={2} divider={<StackDivider borderColor={props.color} />}>
+    <Text fontSize="md">Jornada {props.matchday}</Text>
+    <Text fontSize="md">
+      {props.name} ({props.team})
+    </Text>
+  </Stack>
+);
 
 function WaffleChart({ data }) {
   // console.log(data);
@@ -52,7 +65,7 @@ function WaffleChart({ data }) {
           // More info:
           // - https://eslint-plugin-es.mysticatea.dev/rules/no-nullish-coalescing-operators.html
           // - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-          const color = TEAM_COLORS[colorAccessor(d)] || 'lightgray';
+          const color = TEAM_COLORS[colorAccessor(d)] || DEFAULT_COLOR;
 
           // More info:
           // - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
@@ -64,14 +77,44 @@ function WaffleChart({ data }) {
           // console.log(posValue, yValue);
 
           return (
-            <rect
-              key={d.id}
-              x={scale(xValue)}
-              y={scale(yValue)}
-              width={cellSize}
-              height={cellSize}
-              fill={color}
-            />
+            // More info:
+            // - https://chakra-ui.com/docs/overlay/tooltip
+            // - https://chakra-ui.com/docs/overlay/popover
+            color !== DEFAULT_COLOR ? (
+              <Tooltip
+                key={d.id}
+                hasArrow
+                // label={`J${posValue}: ${nameAccessor(d)} (${colorAccessor(d)})`}
+                label={
+                  <TooltipContent
+                    matchday={posValue}
+                    name={nameAccessor(d)}
+                    team={colorAccessor(d)}
+                    color={color}
+                  />
+                }
+                closeOnClick={true}
+              >
+                <rect
+                  x={scale(xValue)}
+                  y={scale(yValue)}
+                  width={cellSize}
+                  height={cellSize}
+                  fill={color}
+                  // cursor="pointer"
+                  cursor="context-menu"
+                />
+              </Tooltip>
+            ) : (
+              <rect
+                key={d.id}
+                x={scale(xValue)}
+                y={scale(yValue)}
+                width={cellSize}
+                height={cellSize}
+                fill={color}
+              />
+            )
           );
         })}
       </g>

@@ -46,6 +46,7 @@ export const TEAM_COLORS = {
   'Gil Vicente FC': '#ad1814',
   'Boavista FC': '#000000'
 };
+export const DEFAULT_COLOR = 'lightgray';
 
 export const WAFFLE_DIMENSIONS = 6; // Number of rows/columns
 export const DEFAULT_CELL_SIZE = 20; // px
