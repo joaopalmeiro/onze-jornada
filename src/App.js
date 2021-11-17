@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { Container, ChakraProvider } from '@chakra-ui/react';
 import { findLast } from 'lodash/collection';
 import { has, get } from 'lodash/object';
 import { useEffect, useState } from 'react';
@@ -41,9 +41,14 @@ function App() {
   // console.log(players);
   // console.log(currentMatchday);
 
+  // More info:
+  //   - https://github.com/chakra-ui/chakra-ui/blob/main/packages/theme/src/components/container.ts
+  //   - https://chakra-ui.com/docs/layout/container
   return (
     <ChakraProvider resetCSS={true} theme={theme}>
-      <Eleven data={players} />
+      <Container centerContent py={4}>
+        <Eleven data={players} />
+      </Container>
     </ChakraProvider>
   );
 }
