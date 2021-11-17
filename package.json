@@ -4,7 +4,7 @@
   "description": "Visualização do \"11 da Jornada\" da Liga Portugal bwin 2021-22.",
   "private": true,
   "dependencies": {
-    "@chakra-ui/react": "^1.6.6",
+    "@chakra-ui/react": "^1.7.1",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "airtable": "^0.11.1",

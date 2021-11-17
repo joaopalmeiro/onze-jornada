@@ -4,6 +4,7 @@ import { has, get } from 'lodash/object';
 import { useEffect, useState } from 'react';
 
 import Eleven from './Eleven';
+import theme from './theme';
 
 // More info:
 // - https://chakra-ui.com/docs/getting-started#set-up-provider
@@ -41,7 +42,7 @@ function App() {
   // console.log(currentMatchday);
 
   return (
-    <ChakraProvider>
+    <ChakraProvider resetCSS={true} theme={theme}>
       <Eleven data={players} />
     </ChakraProvider>
   );

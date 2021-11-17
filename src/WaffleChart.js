@@ -80,6 +80,9 @@ function WaffleChart({ data }) {
             // More info:
             // - https://chakra-ui.com/docs/overlay/tooltip
             // - https://chakra-ui.com/docs/overlay/popover
+            // - https://chakra-ui.com/docs/theming/theme
+            // - https://github.com/chakra-ui/chakra-ui/blob/main/packages/theme/src/components/tooltip.ts
+            // - https://chakra-ui.com/docs/features/style-props#borders
             color !== DEFAULT_COLOR ? (
               <Tooltip
                 key={d.id}
@@ -93,7 +96,13 @@ function WaffleChart({ data }) {
                     color={color}
                   />
                 }
+                aria-label={`Jornada ${posValue}: ${nameAccessor(d)} (${colorAccessor(d)})`}
                 closeOnClick={true}
+                // defaultIsOpen={true}
+                colorMode="dark"
+                bg="white"
+                border="1px"
+                borderColor="gray.900"
               >
                 <rect
                   x={scale(xValue)}

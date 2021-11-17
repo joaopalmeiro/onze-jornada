@@ -49,7 +49,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   - `yarn run eslint --print-config package.json`.
 - Chakra UI:
   - For React (for Next.js and CRA as well).
-  - `yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4`.
+  - `yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4` (use this command to update Chakra UI as well).
   - [CSSReset](https://github.com/chakra-ui/chakra-ui/blob/main/packages/css-reset/src/css-reset.tsx).
   - 🌀: emoji for learning curve.
   - [useClipboard](https://chakra-ui.com/docs/hooks/use-clipboard) hook.
