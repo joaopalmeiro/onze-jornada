@@ -1,0 +1,6 @@
+/* Note: The styles below must match the styles in the WaffleChart.js file for the tooltip. */
+div[data-popper-arrow-inner] {
+  /* background: var(--chakra-colors-gray-900) !important; */
+  background: var(--chakra-colors-white) !important;
+  border: 1px solid var(--chakra-colors-gray-900);
+}

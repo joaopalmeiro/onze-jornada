@@ -99,6 +99,8 @@ function WaffleChart({ data }) {
                 aria-label={`Jornada ${posValue}: ${nameAccessor(d)} (${colorAccessor(d)})`}
                 closeOnClick={true}
                 // defaultIsOpen={true}
+                py="4px" // Default: "2px"
+                // Note: The styles below must match the styles in the index.css file for the arrow.
                 colorMode="dark"
                 bg="white"
                 border="1px"
